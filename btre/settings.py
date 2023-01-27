@@ -42,14 +42,15 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'cloudinary_storage',
     'django.contrib.staticfiles',
-    'cloudinary',
+    'whitenoise.runserver_nostatic', 
     'django.contrib.humanize',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -76,11 +77,11 @@ TEMPLATES = [
     },
 ]
 
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'dlluw0utm',
-    'API_KEY': '628239376444419',
-    'API_SECRET': 'yix7vlOqbJaGiLLcUDZ8a_QFdCM'
-}
+# CLOUDINARY_STORAGE = {
+#     'CLOUD_NAME': 'dlluw0utm',
+#     'API_KEY': '628239376444419',
+#     'API_SECRET': 'yix7vlOqbJaGiLLcUDZ8a_QFdCM'
+# }
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
@@ -141,6 +142,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR, 'btre/static')
 ]
+STATICFILES_STORAGE="whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Media Folder Settings:
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
