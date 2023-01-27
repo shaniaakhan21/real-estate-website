@@ -31,15 +31,8 @@ DEBUG = True
 # Please refer https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts for details.
 ALLOWED_HOSTS = ['*']
 
-# Whether to use a secure cookie for the CSRF cookie
-# https://docs.djangoproject.com/en/3.2/ref/settings/#csrf-cookie-secure
-CSRF_COOKIE_SECURE = True
+CSRF_FAILURE_VIEW = 'django.views.csrf.csrf_failure'
 
-# The value of the SameSite flag on the CSRF cookie
-# https://docs.djangoproject.com/en/3.2/ref/settings/#csrf-cookie-samesite
-CSRF_COOKIE_SAMESITE = 'Strict'
-
-CSRF_TRUSTED_ORIGINS = ALLOWED_HOSTS.copy()
 
 # Application definition
 
