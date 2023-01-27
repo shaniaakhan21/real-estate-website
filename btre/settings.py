@@ -26,9 +26,21 @@ SECRET_KEY = 'hczb7l8j&5c^g_222d1!(n0vlb@==lnt89*&ab6iia-fc!!jna'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# -*- coding: utf-8 -*-
+# For security consideration, please set to match the host/domain of your site, e.g., ALLOWED_HOSTS = ['.example.com'].
+# Please refer https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts for details.
 ALLOWED_HOSTS = ['*']
 
-CSRF_TRUSTED_ORIGINS = ['http://*', 'https://*']
+# Whether to use a secure cookie for the CSRF cookie
+# https://docs.djangoproject.com/en/3.2/ref/settings/#csrf-cookie-secure
+CSRF_COOKIE_SECURE = True
+
+# The value of the SameSite flag on the CSRF cookie
+# https://docs.djangoproject.com/en/3.2/ref/settings/#csrf-cookie-samesite
+CSRF_COOKIE_SAMESITE = 'Strict'
+
+CSRF_TRUSTED_ORIGINS = ALLOWED_HOSTS.copy()
+
 # Application definition
 
 INSTALLED_APPS = [
