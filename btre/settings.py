@@ -77,9 +77,9 @@ TEMPLATES = [
 ]
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'your_cloud_name',
-    'API_KEY': 'your_api_key',
-    'API_SECRET': 'your_api_secret'
+    'CLOUD_NAME': 'dlluw0utm',
+    'API_KEY': '628239376444419',
+    'API_SECRET': 'yix7vlOqbJaGiLLcUDZ8a_QFdCM'
 }
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
