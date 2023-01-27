@@ -31,7 +31,6 @@ DEBUG = True
 # Please refer https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts for details.
 ALLOWED_HOSTS = ['*']
 
-CSRF_FAILURE_VIEW = 'django.views.csrf.csrf_failure'
 
 
 # Application definition
